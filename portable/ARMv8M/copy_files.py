@@ -108,8 +108,8 @@ _NONSECURE_PORTABLE_FILE_PATHS_ = {
 
 def copy_files_in_dir(src_abs_path, dst_abs_path):
     if os.path.isfile(src_abs_path):
-        print('Src: {}'.format(src_abs_path))
-        print('Dst: {}\n'.format(dst_abs_path))
+        print(f'Src: {src_abs_path}')
+        print(f'Dst: {dst_abs_path}\n')
         shutil.copy2(src_abs_path, dst_abs_path)
     else:
         for src_file in os.listdir(src_abs_path):
@@ -117,8 +117,8 @@ def copy_files_in_dir(src_abs_path, dst_abs_path):
             if os.path.isfile(src_file_abs_path) and src_file != 'ReadMe.txt':
                 if not os.path.exists(dst_abs_path):
                     os.makedirs(dst_abs_path)
-                print('Src: {}'.format(src_file_abs_path))
-                print('Dst: {}\n'.format(dst_abs_path))
+                print(f'Src: {src_file_abs_path}')
+                print(f'Dst: {dst_abs_path}\n')
                 shutil.copy2(src_file_abs_path, dst_abs_path)
 
 
